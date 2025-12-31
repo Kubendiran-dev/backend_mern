@@ -12,31 +12,30 @@ function getDay(num) {
 }
 
 
-getDay(3); 
-getDay(9); 
+getDay(3);
+getDay(9);
 
+
+console.log(getDay(3));
+console.log(getDay(9));
 
 function getName(firstName, lastName, nickname) {
-  if (firstName && lastName) {
-    return firstName + " " + lastName;
-  }
+  if (firstName && lastName) { return firstName + " " + lastName; }
 
-  if (firstName) {
-    return firstName;
-  }
+  if (firstName) { return firstName; }
 
-  if (nickname) {
-    return nickname;
-  }
+  if (nickname) { return nickname; }
 
   return "Anonymous";
 }
 
+console.log(getName("Abi", "Raj"));
 
-getName("Abi", "Raj");      
-getName("Abi", "");         
-getName("", "", "Rocky");   
-getName("", "", "");        
+console.log(getName("Abi", ""));
+
+console.log(getName("", "", "Rocky"));
+
+console.log(getName("", "", ""));
 
 
 function fixWithLet() {
@@ -55,6 +54,8 @@ function createMultiplier(x) {
 const double = createMultiplier(2);
 const triple = createMultiplier(3);
 
-double(5); // 10
-triple(5); // 15
+double(5);
+triple(5);
 
+console.log(double(5));
+console.log(triple(5));
