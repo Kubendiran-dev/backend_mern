@@ -64,4 +64,69 @@ const result = users
 console.log(result);
 
 
+//task:
+//1.
+function doTask(callback) {
+  callback();
+  console.log("Task Completed");
+}
+
+doTask(() => {
+  console.log("Callback executed");
+});
+
+//2.
+function checkAge(age, callback) {
+  callback(age);
+}
+
+checkAge(20, function (age) {
+  if (age >= 18) {
+    console.log("Eligible to vote");
+  } else {
+    console.log("Not eligible");
+  }
+});
+
+
+//4.let arr = [10, 20];
+
+arr.push(30, 40, 50); 
+arr.shift();         
+
+console.log(arr);
+
+//5.
+let nums = [1, 2, 3, 4];
+
+nums.pop();      
+nums.push(99);   
+
+console.log(nums);
+
+//6.
+
+let data = [10, 20, 30, 40, 50];
+
+data.splice(2, 2); 
+
+console.log(data);
+
+
+//7.
+
+const prices = [100, 200, 300];
+const GST = 0.18;
+
+const gstPrices = prices.map(price => price + price * GST);
+
+console.log(gstPrices);
+
+//8.
+
+const salaries = [20000, 30000, 25000];
+
+const totalSalary = salaries.reduce((sum, salary) => sum + salary, 0);
+
+console.log(totalSalary);
 
