@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="msg"></h1>
+    <div id="tamil"></div>
+
+    
+    <button id="btn">click pannu</button>
+
+    <button onclick="sayHi()">press me</button>
+
+    <select onchange="showValue(event)">
+  <option>Apple</option>
+  <option>Banana</option>
+</select>
+
+
+<input type="text" id="input" placeholder="type here" autocomplete="off">
+<p id="output"></p>
+<button id="clear">Clear</button>
+</body>
+
+ <script>
+
+let message= document.getElementById('msg')
+let tamil= document.getElementById('tamil')
+
+message.innerHTML="Welcome to my webpage"
+
+let text1 = document.createTextNode("Vanakkam Tamil Makkale")
+
+let ptag = document.createElement("p")
+ptag.textContent += "Ahh Vazhthukal Vazhthukal!"
+
+tamil.className = "class1"
+tamil.style.color = "green"
+message.style.backgroundColor = "pink"
+tamil.appendChild(text1);
+tamil.appendChild(ptag);
+
+// tamil.innerHTML = '<p> "Ahh Vazhthukal Vazhthukal!" </p>'
+// tamil.textContent += " Vanakkam Tamil Makkale"
+
+
+let btn = document.getElementById("btn");
+btn.textContent = 0;
+
+// btn.addEventListener('mouseenter',(e)=>{
+// btn.textContent = "click panna pora"
+// console.log("almost");
+// })
+
+// btn.addEventListener('click',(e)=>{
+// btn.textContent = "clicked"
+// console.log("done");
+// })
+
+// btn.addEventListener('mouseout',(e)=>{
+// btn.textContent = "click pannu"
+// console.log("out");
+// })
+
+document.addEventListener("keydown",(e)=>{
+    console.log(e.key);
+
+    // switch(e.key){
+    //     case "ArrowUp":
+    //         btn.textContent = Number(btn.textContent)+1;
+    //         break;
+    
+    //         case "ArrowDown":
+    //         btn.textContent = Number(btn.textContent)-1;
+    //         break;
+    // }
+
+//     if (e.key === "ArrowUp") {
+//     btn.textContent++;
+//   } 
+//   else if (e.key === "ArrowDown") {
+//     btn.textContent--;
+//   }
+
+//   e.preventDefault()
+ })
+
+
+ function sayHi(){
+    alert("Vanakkam")
+ }
+
+function showValue(e) {
+    console.log(e.target.value);
+  }
+
+  
+
+  let input = document.getElementById("input");
+  let output = document.getElementById("output");
+  let clear = document.getElementById("clear")
+
+  output.innerText = "";
+  
+  input.addEventListener("keyup",(e)=>{
+    let value = input.value.trim();
+    output.innerHTML = value;
+
+    // if(e.key === "Escape"){
+    //     input.value = "";
+    //     output.value = "";
+    // }
+    })
+
+    clear.addEventListener("click",(e)=>{
+input.value="";
+output.innerText="";}
+    )
+
+    </script>
+
+</html>

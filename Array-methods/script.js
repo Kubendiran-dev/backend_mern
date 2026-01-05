@@ -64,8 +64,7 @@ const result = users
 console.log(result);
 
 
-//task:
-//1.
+// TASK 1: Callback after execution
 function doTask(callback) {
   callback();
   console.log("Task Completed");
@@ -75,7 +74,8 @@ doTask(() => {
   console.log("Callback executed");
 });
 
-//2.
+
+// TASK 2: Age validation using callback
 function checkAge(age, callback) {
   callback(age);
 }
@@ -89,32 +89,33 @@ checkAge(20, function (age) {
 });
 
 
-//4.let arr = [10, 20];
+// TASK 4: Add 3 elements & remove first
+let arr = [10, 20];
 
-arr.push(30, 40, 50); 
-arr.shift();         
+arr.push(30, 40, 50);
+arr.shift();
 
 console.log(arr);
 
-//5.
+
+// TASK 5: Replace last element without index
 let nums = [1, 2, 3, 4];
 
-nums.pop();      
-nums.push(99);   
+nums.pop();
+nums.push(99);
 
 console.log(nums);
 
-//6.
 
+// TASK 6: Remove exactly 2 elements from middle
 let data = [10, 20, 30, 40, 50];
 
-data.splice(2, 2); 
+data.splice(2, 2);
 
 console.log(data);
 
 
-//7.
-
+// TASK 7: Convert prices to GST-added prices (map)
 const prices = [100, 200, 300];
 const GST = 0.18;
 
@@ -122,11 +123,12 @@ const gstPrices = prices.map(price => price + price * GST);
 
 console.log(gstPrices);
 
-//8.
 
+// TASK 8: Find total salary using reduce
 const salaries = [20000, 30000, 25000];
 
 const totalSalary = salaries.reduce((sum, salary) => sum + salary, 0);
 
 console.log(totalSalary);
+
 
