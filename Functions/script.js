@@ -164,18 +164,35 @@ function greet(name) {
   return "Hello, " + name;
 }
 
+
+console.log(greet("kubea"));
+
 // 1. Normal arrow
 const greet1 = (name) => {
   return "Hello, " + name;
 };
 
+console.log(greet1("rakshi"));
+
 // 2. Implicit return
 const greet2 = (name) => "Hello, " + name;
+
+console.log(greet2("madhavi"));
 
 // 3. Without parentheses
 const greet3 = name => "Hello, " + name;
 
+console.log(greet3("nagaraj"));
 
 
+//callback
 
+function wishes(name){
+    console.log("happy "+ name);   
+}
 
+function festival(callback){
+    callback("diwali")
+}
+
+festival(wishes);
