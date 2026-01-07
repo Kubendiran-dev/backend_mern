@@ -1,0 +1,71 @@
+1.Why let and const were introduced when var already existed?
+
+Ans: let and const were introduced to solve problems in var. var does not have block scope, allows redeclaration, and causes bugs in loops. let and const provide block scope, prevent redeclaration, and make code safer. const is used when the value should not change. Because of these reasons, modern JavaScript prefers let and const over var.
+
+2.How does JavaScript decide the data type of a variable at runtime?
+
+Ans: JavaScript is a dynamically typed language. This means you do not need to declare a data type.
+JavaScript decides the data type based on the value assigned to the variable at runtime. If the value changes, the data type can also change.
+
+3.What is the difference between == and ===, and why do companies prefer ===?
+
+Ans: == checks only value and allows type conversion.
+=== checks both value and data type and does not allow type conversion.
+Because == can give unexpected results, companies prefer === to avoid bugs and write safer code.
+
+4. How do logical operators (&&, ||) help in writing cleaner conditional code?
+
+Ans: Logical operators help combine multiple conditions into one simple condition.
+This reduces extra if statements and makes the code short, clean, and readable.
+
+5.When would you choose switch over if-else in real applications?
+
+
+Ans: I choose switch when I need to compare one value against many fixed options.
+switch makes the code cleaner, easier to read, and easier to maintain than long if-else chains.
+
+6.Why does do-while loop execute at least once even if the condition is false?
+
+Ans: In a do-while loop, the code block runs before the condition is checked.
+The condition is checked after the first execution.
+Because of this, the loop always executes at least one time, even if the condition is false.
+
+7. What happens internally when a for loop runs in JavaScript?
+
+Ans: When a for loop runs, JavaScript follows four steps repeatedly:
+initialize → check condition → execute code → update value.
+This continues until the condition becomes false.
+
+8.How does array indexing work, and what happens if you access an index that does not exist?
+
+Ans: Array indexing works using numbers starting from 0. Each index points to a value stored in the array.
+If you access an index that does not exist, JavaScript returns undefined, not an error.
+
+9.What is the difference between map() and forEach() in terms of return value and use case?
+
+Ans: forEach() is used to process the value inside the array's but does not return a new array.
+
+map() creat's a new array by applying a fn to each element of the OG array.
+
+10.Why are higher-order array methods preferred over traditional loops?
+
+Ans: Higher-order array methods like map, filter, and reduce make code shorter, clearer, and easier to understand.
+They focus on what to do with data instead of how to loop, which reduces bugs and improves readability.
+
+11.How is an object stored in memory compared to a primitive value?
+
+Ans: Primitive values are directly stored in memory with their actual value. Objects are stored by reference, it means variable stores the memory address, not the actual data.
+
+12.What is the difference between parameters and arguments, and how do callbacks fit into this?
+
+Ans:Parameters are the variable names used in a function definition.
+Arguments are the actual values passed to the function when it is called.
+A callback is a function passed as an argument to another function and executed later.
+
+13.Why does asynchronous JavaScript not block the main thread, and how does this help the UI?
+
+Ans: Async JavaScript runs long tasks in the background, so the main thread stays free and the UI remains responsive.
+
+14.What is the role of the V8 engine in executing JavaScript and supporting React applications?
+
+Ans: V8 is the JavaScript engine that runs JavaScript code. It converts JavaScript into machine code so the computer can execute it fast. React applications are written in JavaScript, so V8 executes React code and makes it run smoothly in the browser or Node.js.

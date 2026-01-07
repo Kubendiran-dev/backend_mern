@@ -59,3 +59,6 @@ triple(5);
 
 console.log(double(5));
 console.log(triple(5));
+
+
+
