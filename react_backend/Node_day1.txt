@@ -1,0 +1,31 @@
+1.what is HTTP modules why we use?
+
+The HTTP module is a built-in Node.js module used to create web servers and handle browser requests/responses.
+
+It allows Node to communicate over the web using the HTTP protocol (same protocol websites use).
+
+We use it to:
+
+1.Create a server  http.createServer()
+
+2.Handle requests from browser  http://localhost:5000
+
+3.Send response back  res.write("Hello"); res.end();
+
+4.Build APIs res.end(JSON.stringify({name:"John"}));
+
+
+2.what is import export methods.
+
+Import / Export methods are used to share code between files in JavaScript.
+
+Instead of writing everything in one file, we split code into multiple files and connect them using:
+
+export → send code out
+
+import / require → bring code in
+
+5.what is the machine and run time environment it is? in Node
+
+Node.js is a JavaScript runtime environment built on Chrome V8 engine that allows JavaScript to run on a machine (server/computer) outside the browser.
+

@@ -1,3 +1,7 @@
+
+
+
+
 1.Why let and const were introduced when var already existed?
 
 Ans: let and const were introduced to solve problems in var. var does not have block scope, allows redeclaration, and causes bugs in loops. let and const provide block scope, prevent redeclaration, and make code safer. const is used when the value should not change. Because of these reasons, modern JavaScript prefers let and const over var.
@@ -58,7 +62,7 @@ Ans: Primitive values are directly stored in memory with their actual value. Obj
 
 12.What is the difference between parameters and arguments, and how do callbacks fit into this?
 
-Ans:Parameters are the variable names used in a function definition.
+Ans: Parameters are the variable names used in a function definition.
 Arguments are the actual values passed to the function when it is called.
 A callback is a function passed as an argument to another function and executed later.
 

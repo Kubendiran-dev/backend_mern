@@ -1,0 +1,174 @@
+React:
+
+1. What are all the hooks you know?
+
+useState
+useEffect
+useRef
+useContext
+useNavigation
+useLocation
+useReducer
+useCallbacks
+useMemo
+useID
+useTransition
+useDefferedValue
+useImperativeHandle
+
+2.What is the use of Frontend?
+
+Frontend is the part of a website or application that users see and interact with. Its main use is to display content, create the user interface, handle user actions like clicks and typing, validate inputs, and communicate with the backend to show data. It helps make applications visually appealing, responsive, and easy to use, improving the overall user experience.
+
+3.what is the different between react and js ?
+
+JavaScript is a high level programming language used to make web pages dynamic. It can handle logic, events, API calls, DOM manipulation, and works in both frontend and backend (Node.js).
+
+React is a JavaScript library used to build user interfaces (UI). It helps developers create reusable components, manage state, and build fast single-page applications more easily than using plain JavaScript.
+
+4.what is the CSR?
+
+CSR (Client-Side Rendering) is a method where the browser loads a basic page and JavaScript renders the content dynamically on the user’s device instead of the server sending a fully ready page. It is commonly used in React apps for faster interactions after the initial load.
+
+5. How you pass the data's to the backend?
+
+We pass data to the backend by sending it through API requests from the frontend using JavaScript.
+
+Common methods:
+
+POST → send new data (form, signup, login)
+
+PUT/PATCH → update data
+
+GET → fetch data
+
+DELETE → remove data
+
+
+Node:
+
+1.What is Node?
+
+Node.js is a runtime environment that allows you to run JavaScript outside the browser, mainly on the server. It is used to build backend applications, handle APIs, manage databases, and perform server-side operations like authentication and file handling.
+
+
+2.What are all the imported Modules in node?
+
+In Node.js, modules are reusable pieces of code that you import using require() (CommonJS) or import (ES modules).
+
+There are three types of modules in Node:
+
+1) Core (built-in) modules
+
+These come with Node.js by default.
+
+Commonly used ones:
+
+http → create server
+
+fs → file system operations
+
+path → handle file paths
+
+os → system info
+
+url → URL handling
+
+events → event handling
+
+crypto → encryption
+
+stream → data streaming
+
+util → utilities
+
+ex:const http = require("http");
+
+
+Local modules:
+
+Modules created by you in your project.
+
+ex:const myFile = require("./myModule");
+
+Third-party modules:
+
+Installed using npm.
+
+Examples:
+
+express
+
+mongoose
+
+cors
+
+dotenv
+
+nodemon
+
+ex:const express = require("express");
+
+3.what is the different between node and js?
+
+JavaScript
+
+A programming language
+
+Mainly runs in the browser
+
+Used to create interactive web pages (buttons, forms, animations)
+
+Node.js
+
+A runtime environment for JavaScript
+
+Runs JavaScript outside the browser (on server)
+
+Used to build backend apps, APIs, and handle databases
+
+
+4.what is server?
+
+
+A server is a computer or software that provides data, services, or resources to other computers (called clients) over a network.
+
+When you open a website:
+
+Your browser sends a request to the server.
+
+The server processes it.
+
+The server sends back data (web page, images, etc.).
+
+Example:
+
+You search Google → request goes to Google server
+
+Server sends search results → shown in your browser.
+
+
+5.what is backend process in node?
+
+
+The backend process in Node.js is the server-side work that happens behind the scenes to handle requests from the frontend and return responses.
+
+Main backend processes in Node:
+
+Receive request – from browser/app (API call).
+
+Process data – apply logic, validation, authentication.
+
+Database interaction – store, update, fetch data.
+
+Business logic execution – calculations, rules.
+
+Send response – return data/result to frontend.
+
+Example flow:
+
+User login →
+Frontend sends email & password →
+Node.js server checks data →
+Verifies from database →
+Returns success/error response.

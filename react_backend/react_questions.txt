@@ -1,0 +1,43 @@
+1.What is React? Why is it called a library and not a framework?
+
+React is a JavaScript library used to build user interfaces, especially single-page applications. It is called a library because it focuses only on the view layer and gives developers flexibility to choose other tools, unlike frameworks that provide a full structure.
+
+2.What is Virtual DOM? How is it different from Real DOM?
+
+Virtual DOM is a lightweight copy of the real DOM. React updates the Virtual DOM first, compares it with the previous version, and then updates only the changed parts in the real DOM, improving performance.
+
+3.What are components in React? Difference between functional and class components?
+
+Components are reusable UI building blocks in React. Functional components are simple functions that use Hooks, while class components are ES6 classes that use lifecycle methods and state. Modern React mainly uses functional components.
+
+4.What are Hooks? Why were Hooks introduced in React?
+
+Hooks are functions like useState and useEffect that allow functional components to use state and lifecycle features. They were introduced to reduce class complexity and make logic reusable and cleaner.
+
+5.What is the difference between useState and useReducer? When would you choose one over the other?
+
+useState is used for simple state management, while useReducer is used for complex state logic with multiple actions and transitions.
+
+6.What is prop drilling? How can it be avoided in React?
+
+Prop drilling means passing props through many components to reach a nested child. It can be avoided using Context API or state management libraries like Redux.
+
+7.What is Lazy Loading in React? Why is it important for performance?
+
+Lazy loading loads components only when needed instead of at initial render. This reduces bundle size and improves performance.
+
+8.What is the purpose of useEffect? Explain dependency array behavior.
+
+useEffect is used for side effects like API calls and timers. Dependency array decides when it runs: empty array → once, with values → on change, no array → every render.
+
+9.What is the difference between useRef and useState?
+
+useRef stores mutable values or DOM references without re-rendering, while useState updates UI and triggers re-renders.
+
+10.What is the role of keys in React lists? Why are they important?
+
+Keys in React lists help React identify changed items and update only necessary elements. They must be unique and stable for better performance.
+
+
+
+

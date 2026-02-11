@@ -29,6 +29,8 @@ import { useNavigate } from 'react-router-dom'
         Go To Details Page
       </button>
 
+<br />
+
       <button onClick={editProduct}>Edit Product</button>
      </>
    )
