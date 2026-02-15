@@ -1,0 +1,101 @@
+1. What is the difference between Node.js and Express?
+
+Node.js is a runtime environment that allows JavaScript to run on the server side and is used to build backend applications, servers, and APIs. Express.js is a framework built on top of Node.js that simplifies server development by providing features like routing, middleware, and easier request-response handling. In short, Node.js provides the foundation to run JavaScript on the server, while Express makes building web applications and APIs faster and easier on top of Node.js.
+
+2.Explain how routing works in Express internally.
+
+In Express, routing works using a middleware stack. When a request comes in, Express checks the request URL and HTTP method against the routes defined (like app.get() or app.post()). Each route is stored internally, and Express searches them in order. If it finds a match, it runs that route’s callback function; if not, it moves to the next using next(). If no route matches, it returns a 404 response. Express handles all this on top of Node.js’s http module.
+
+3. What is the purpose of express.json() middleware?
+
+express.json() is a built-in middleware used to parse incoming requests with JSON data. When a client sends JSON in the request body (like in POST or PUT requests), this middleware converts the JSON into a JavaScript object and makes it available in req.body. Without express.json(), Express cannot read JSON data from the request body.
+
+4.What are the different HTTP methods used in REST APIs? Explain their use cases.
+
+REST APIs use different HTTP methods to perform specific operations on resources:
+
+GET – Retrieve data from the server (e.g., fetch users list).
+
+POST – Send data to the server to create a new resource (e.g., create a new user).
+
+PUT – Update an entire existing resource (e.g., replace user details).
+
+PATCH – Update only specific fields of a resource (e.g., change user email only).
+
+DELETE – Remove a resource from the server (e.g., delete a user).
+
+5. What is the difference between req.params, req.query, and req.body?
+
+In Express, req.params, req.query, and req.body are used to get data from different parts of the client request:
+
+req.params – Gets route parameters from the URL path.
+Example: /users/5 → req.params.id = 5
+
+req.query – Gets query string values from the URL.
+Example: /users?age=20 → req.query.age = 20
+
+req.body – Gets data sent in the request body (mostly in POST/PUT/PATCH), usually JSON.
+Example: { name: "John" } → req.body.name = "John"
+
+8.How does route mounting work in Express?
+
+Route mounting in Express means attaching a group of routes to a specific base path using app.use(). You define routes in a separate router and then “mount” that router on a path. When a request starts with that base path, Express forwards it to the mounted router and matches the remaining path with its routes.
+
+Example: If a router is mounted with app.use('/users', userRouter), then:
+
+/users/ → handled by userRouter
+
+/users/profile → matched inside userRouter as /profile
+
+10.What properties are available inside the req object?
+
+In Express, the req (request) object contains information about the incoming client request. Commonly used properties include:
+
+req.params – Route parameters from URL path
+
+req.query – Query string values
+
+req.body – Data sent in request body (JSON/form)
+
+req.headers – Request headers information
+
+req.method – HTTP method used (GET, POST, etc.)
+
+req.url / req.originalUrl – Requested URL
+
+req.path – Path part of the URL
+
+req.cookies – Cookies sent by client
+
+req.ip – Client IP address
+
+
+1.
+
+// Import Express
+const express = require('express');
+
+// Create app
+const app = express();
+
+// Start server on port 3000
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
+
+2.
+
+const express = require('express');
+
+const app = express();
+
+// GET route for "/"
+app.get('/', (req, res) => {
+  res.send("Welcome to my server");
+});
+
+// Start server
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
+`
