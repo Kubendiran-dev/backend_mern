@@ -5,6 +5,9 @@ export const responseController = (req, res) => {
     if (name === "kubea") {
         res.status(200).send("Authorized user")
     }
+
+
+    
     else {
         res.status(404).send("Unauthorized access")
     }
