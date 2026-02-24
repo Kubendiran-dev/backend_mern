@@ -1,0 +1,93 @@
+1. What is Node.js and why is it used in backend development?
+
+Node.js is a JavaScript runtime that runs on the server. It is used to build fast, scalable backend applications using event-driven, non-blocking architecture.
+
+2.Difference between synchronous and asynchronous functions in Node.js
+
+Synchronous: Executes line by line, blocks next task.
+
+Asynchronous: Non-blocking, runs tasks in background using callbacks/promises/async-await.
+
+3.Purpose of fs module? Two methods?
+
+fs (File System) module is used to read/write files in Node.js.
+Methods:
+
+fs.readFile()
+
+fs.writeFile()
+
+4.Difference between relative and absolute path
+
+Relative: Based on current file location (./routes/user.js)
+
+Absolute: Full system path (D:/project/routes/user.js)
+
+5.What is Express and how different from Node HTTP module?
+
+Express is a framework built on Node.js to simplify server and API creation.
+HTTP module is low-level; Express provides routing, middleware, and easier syntax.
+
+6.What is routing in Express? How to create?
+
+Routing means handling different URLs/endpoints.
+
+app.get("/users", (req,res)=>{ res.send("Users"); });
+7.Difference between req.params, req.query, req.body
+
+req.params → URL parameters (/user/:id)
+
+req.query → query string (?name=kuben)
+
+req.body → POST request data
+
+8.What is res object? Why important?
+
+res (response object) is used to send data from server to client.
+Example: res.send(), res.json(), res.status().
+
+9.Use of HTTP status codes? Name three
+
+Status codes indicate request result.
+Examples:
+
+200 → Success
+
+404 → Not found
+
+500 → Server error
+
+10.What is MVC architecture? Why use?
+
+MVC = Model, View, Controller.
+It separates logic, UI, and data handling → improves maintainability and scalability.
+
+11.What is MongoDB? Difference from SQL?
+
+MongoDB is a NoSQL database storing data in JSON-like documents.
+SQL uses tables/rows; MongoDB uses collections/documents.
+
+12.What is Mongoose and why use?
+
+Mongoose is an ODM library for MongoDB in Node.js.
+It helps define schemas, models, and handle database operations easily.
+
+13.What is a schema in Mongoose?
+
+Schema defines the structure of documents in MongoDB.
+Example fields, types, validations.
+
+14.What is a model in Mongoose?
+
+Model is a wrapper created from schema to interact with MongoDB collection.
+Used for CRUD operations.
+
+15.Mongoose CRUD methods
+
+Create: Model.create()
+
+Read: Model.find() / findById()
+
+Update: Model.updateOne() / findByIdAndUpdate()
+
+Delete: Model.deleteOne() / findByIdAndDelete()
